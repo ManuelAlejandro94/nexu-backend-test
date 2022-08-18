@@ -1,0 +1,13 @@
+# Idea
+/.idea/
+*.iml
+# Python
+*.pyc
+*.egg-info/
+/build/
+/dist/
+/.eggs/
+/.cache/
+/.tox/
+# App
+/venv/

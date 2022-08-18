@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "7ca292ea-19bf-4190-9f4e-ced07acaa8e7",
+		"name": "nexu-backend-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "brands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url.Localhost}}/brands",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get models from brands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url.Localhost}}/brands/:id/models",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"brands",
+						":id",
+						"models"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "Acura"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nueva brand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tesla_New\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/brands",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Models",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"average_price\": 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/models/:id",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"models",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "Tesla_New_Model"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Models",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url.Localhost}}/models?greater=380000&lower=400000",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"models"
+					],
+					"query": [
+						{
+							"key": "greater",
+							"value": "380000"
+						},
+						{
+							"key": "lower",
+							"value": "400000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo Model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tesla_New_Model\",\r\n    \"average_price\": 406400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/brands/:id/models",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"brands",
+						":id",
+						"models"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "Tesla_New"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
