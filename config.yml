@@ -1,0 +1,10 @@
+app:
+    app_id: nexu-backend
+mongo:
+  host: localhost
+  port: 27017
+  database: nexusdb
+  collection: models
+  authentication:
+  user:
+  pass:
